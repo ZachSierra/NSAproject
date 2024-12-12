@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Top Secret",
+    "portion-marking": "TS",
+    "style-class": "TopSecret"
+  },
+  {
+    "name": "Secret",
+    "portion-marking": "S",
+    "style-class": "Secret"
+  },
+  {
+    "name": "Confidential",
+    "portion-marking": "C",
+    "style-class": "Confidential"
+  },
+  {
+    "name": "Unclassified",
+    "portion-marking": "U",
+    "style-class": "Unclassified"
+  }
+]

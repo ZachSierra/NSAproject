@@ -1,0 +1,42 @@
+[
+  {
+    "name": "HCS",
+    "portionMarking": "HCS",
+    "requiredClassification": [""],
+    "requiredDissemination": ["NOFORN"],
+    "prohibitedWith": ["UNCLASSIFIED"],
+    "classStyle": "style1"
+  },
+  {
+    "name": "COMINT",
+    "portionMarking": "SI",
+    "requiredClassification": [""],
+    "requiredDissemination": [""],
+    "prohibitedWith": [""],
+    "classStyle": "style1"
+  },
+  {
+    "name": "-GAMMA",
+    "portionMarking": "-G",
+    "requiredClassification": ["TOP SECRET"],
+    "requiredSCI": ["SI", "ORCON"],
+    "prohibitedWith": [""],
+    "classStyle": "style1"
+  },
+  {
+    "name": "-ECI",
+    "portionMarking": "ECI",
+    "requiredClassification": ["TOP SECRET"],
+    "requiredWith": ["SI"],
+    "prohibitedWith": [""],
+    "classStyle": "style1"
+  },
+  {
+    "name": "TALENT KEYHOLE",
+    "portionMarking": "TK",
+    "requiredClassification": [""],
+    "requiredDissemination": [""],
+    "prohibitedWith": ["UNCLASSIFIED", "CONFIDENTIAL"],
+    "classStyle": "style1"
+  }
+]

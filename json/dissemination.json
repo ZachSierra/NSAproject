@@ -1,0 +1,210 @@
+[
+  {
+    "name": "For Official Use Only",
+    "classification": "FOUO",
+    "requiredWith": [],
+    "prohibitedWith": ["SECRET", "TOP SECRET", "CONFIDENTIAL"],
+    "class-name": "style1",
+    "description": "Information restricted to official use only. Cannot be used with classified information.",
+    "accessLevel": "restricted",
+    "portionMarking": {
+      "portionType": "header",
+      "marking": "FOUO"
+    }
+  },
+  {
+    "name": "Originator Controlled",
+    "classification": "ORCON",
+    "requiredWith": [],
+    "prohibitedWith": ["UNCLASSIFIED"],
+    "class-name": "style2",
+    "description": "Information that is controlled by the originator. For use only with TOP SECRET, SECRET, or CONFIDENTIAL.",
+    "accessLevel": "restricted,secret,top secret",
+    "portionMarking": {
+      "portionType": "header",
+      "marking": "OC"
+    }
+  },
+  {
+    "name": "Controlled Imagery",
+    "classification": "IMCON",
+    "requiredWith": ["NOFORN"],
+    "prohibitedWith": ["UNCLASSIFIED", "TOP SECRET", "CONFIDENTIAL"],
+    "class-name": "style3",
+    "description": "Imagery that is controlled and restricted. For use with SECRET. May require NOFORN.",
+    "accessLevel": "secret",
+    "portionMarking": {
+      "portionType": "header",
+      "marking": "IMC"
+    }
+  },
+  {
+    "name": "Sources and Methods Information",
+    "classification": "SAMI",
+    "requiredWith": [],
+    "prohibitedWith": ["UNCLASSIFIED"],
+    "class-name": "style4",
+    "description": "Information related to intelligence sources and methods. For use only with TOP SECRET, SECRET, or CONFIDENTIAL. In certain cases, can be used with REL TO or RELIDO.",
+    "accessLevel": "restricted,secret,top secret",
+    "portionMarking": {
+      "portionType": "header",
+      "marking": "SAMI"
+    }
+  },
+  {
+    "name": "Not Releasable to Foreign Nationals",
+    "classification": "NOFORN",
+    "requiredWith": [],
+    "prohibitedWith": ["UNCLASSIFIED", "RELTO", "RELIDO", "EYES ONLY"],
+    "class-name": "style5",
+    "description": "Information that cannot be shared with foreign nationals. May be used with TOP SECRET, SECRET, CONFIDENTIAL, or UNCLASSIFIED.",
+    "accessLevel": "restricted,secret,top secret",
+    "portionMarking": {
+      "portionType": "header",
+      "marking": "NF"
+    }
+  },
+  {
+    "name": "Caution - Proprietary Information Involved",
+    "classification": "PROPIN",
+    "requiredWith": [],
+    "prohibitedWith": [],
+    "class-name": "style6",
+    "description": "Contains proprietary information and should be treated with caution. May be used with TOP SECRET, SECRET, CONFIDENTIAL, or UNCLASSIFIED",
+    "accessLevel": "restricted,secret,top secret",
+    "portionMarking": {
+      "portionType": "header",
+      "marking": "PR"
+    }
+  },
+  {
+    "name": "Authorized for Release to",
+    "classification": "REL TO",
+    "requiredWith": [],
+    "prohibitedWith": ["NOFORN", "EYES ONLY", "UNCLASSIFIED"],
+    "class-name": "style7",
+    "description": "Information that can be shared with specific authorized entities. May only be used with TOP SECRET, SECRET, CONFIDENTIAL. May be used with RELIDO. Cannot be used with NOFORN or EYES ONLY.",
+    "accessLevel": "restricted,secret,top secret",
+    "portionMarking": {
+      "portionType": "header",
+      "marking": "REL TO"
+    }
+  },
+  {
+    "name": "Releasable by Information Disclosure Official",
+    "classification": "RELIDO",
+    "requiredWith": [],
+    "prohibitedWith": ["NOFORN"],
+    "class-name": "style8",
+    "description": "Information that can be released by an authorized disclosure official. Applies to intelligence information only. May be used independently or with REL TO. Cannot be used with NOFORN.",
+    "accessLevel": "restricted",
+    "portionMarking": {
+      "portionType": "header",
+      "marking": "RELIDO"
+    }
+  },
+  {
+    "name": "Restricted Data",
+    "classification": "RD",
+    "requiredWith": [],
+    "prohibitedWith": [ "UNCLASSIFIED"],
+    "class-name": "style9",
+    "description": "Information classified as restricted data. May be used only with TOP SECRET or SECRET.",
+    "accessLevel": "secret,top secret",
+    "portionMarking": {
+      "portionType": "header",
+      "marking": "RD"
+    }
+  },
+  {
+    "name": "Critical Nuclear Weapon Design Information",
+    "classification": "CNWDI",
+    "requiredWith": ["RD", "FRD"],
+    "prohibitedWith": ["CONFIDENTIAL", "UNCLASSIFIED"],
+    "class-name": "style10",
+    "description": "Information crucial to nuclear weapon design. May be used only with TOP SECRET or SECRET. Requires RD or FRD.",
+    "accessLevel": "secret,top secret",
+    "portionMarking": {
+      "portionType": "header",
+      "marking": "CNWDI"
+    }
+  },
+  {
+    "name": "Sigma [#]",
+    "classification": "SG [#]",
+    "requiredWith": ["RD", "FRD"],
+    "prohibitedWith": ["UNCLASSIFIED"],
+    "class-name": "style11",
+    "description": "May be used only with TOP SECRET, SECRET, or CONFIDENTIAL. Requires RD or FRD. [#] represents the SIGMA number which ranges from 1 to 99.",
+    "accessLevel": "restricted,secret,top secret",
+    "portionMarking": {
+      "portionType": "header",
+      "marking": "SG"
+    }
+  },
+  {
+    "name": "Formerly Restricted Data",
+    "classification": "FRD",
+    "requiredWith": [],
+    "prohibitedWith": ["UNCLASSIFIED"],
+    "class-name": "style13",
+    "description": "Formerly restricted data. May be used only with TOP SECRET, SECRET, or CONFIDENTIAL",
+    "accessLevel": "restricted,secret,top secret",
+    "portionMarking": {
+      "portionType": "header",
+      "marking": "FRD"
+    }
+  },
+  {
+    "name": "DOD or DOE Controlled Nuclear Information",
+    "classification": "DCNI",
+    "requiredWith": [],
+    "prohibitedWith": ["CONFIDENTIAL", "SECRET", "TOP SECRET"],
+    "class-name": "style14",
+    "description": "Information controlled by the Department of Defense or Department of Energy. May only be used with UNCLASSIFIED.",
+    "accessLevel": "restricted",
+    "portionMarking": {
+      "portionType": "header",
+      "marking": "DCNI"
+    }
+  },
+  {
+    "name": "USA Eyes Only",
+    "classification": "EYES",
+    "requiredWith": [],
+    "prohibitedWith": ["NOFORN", "RELTO", "UNCLASSIFIED"],
+    "class-name": "style15",
+    "description": "Information restricted to U.S. personnel only. May only be used with TOP SECRET, SECRET, or CONFIDENTIAL. Cannot be used with NOFORN or REL TO. Can be used with RELIDO.",
+    "accessLevel": "restricted,secret,top secret",
+    "portionMarking": {
+      "portionType": "header",
+      "marking": "EYES"
+    }
+  },
+  {
+    "name": "DEA Sensitive",
+    "classification": "DSEN",
+    "requiredWith": [],
+    "prohibitedWith": ["CONFIDENTIAL", "SECRET", "TOP SECRET"],
+    "class-name": "style16",
+    "description": "Information sensitive to the Drug Enforcement Administration. May only be used with UNCLASSIFIED.",
+    "accessLevel": "restricted",
+    "portionMarking": {
+      "portionType": "header",
+      "marking": "DSEN"
+    }
+  },
+  {
+    "name": "Foreign Intelligence Surveillance Act",
+    "classification": "FISA",
+    "requiredWith": [],
+    "prohibitedWith": [],
+    "class-name": "style17",
+    "description": "Information governed by the Foreign Intelligence Surveillance Act.",
+    "accessLevel": "restricted",
+    "portionMarking": {
+      "portionType": "header",
+      "marking": "FISA"
+    }
+  }
+]
