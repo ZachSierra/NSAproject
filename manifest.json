@@ -1,0 +1,17 @@
+{
+    "name": "Info Alert Extensions",
+    "description": "Info Alert for All Paragraphs Extension",
+    "version": "1.0",
+    "manifest_version": 3,
+    "content_scripts": [
+    {
+        "js": [
+            "content-script.js"
+        ],
+        "matches": [
+            "<all_urls>",
+            "file:///"
+        ]
+    }
+]
+}
