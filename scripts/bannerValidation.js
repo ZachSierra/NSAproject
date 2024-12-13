@@ -66,7 +66,7 @@ async function validateBanner(banner) {
 
                 for (const requiredDissem of rule['requiredDissemination']) {
                     if (requiredDissem !== "" && banner.dissemination !== requiredDissem) {
-                        console.log("ERROR: Required dissemination " + requiredDissem + " is not included in banner for " + sci.name + "!!!");
+                        console.log("ERROR: Required dissemination " + requiredDissem + " is not included in banner for " + sci.name + ".");
                         console.log("Banner with error: " + banner.toString());
                         return banner.classification;
                     }
