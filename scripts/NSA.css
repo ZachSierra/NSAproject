@@ -1,0 +1,28 @@
+.top-secret {
+    color: red;
+    font-weight: bold;
+    background-color: #fdd;
+    padding: 5px;
+    border: 2px solid red;
+}
+.secret {
+    color: orange;
+    font-weight: bold;
+    background-color: #fee;
+    padding: 5px;
+    border: 2px solid orange;
+}
+.confidential {
+    color: blue;
+    font-weight: bold;
+    background-color: #eef;
+    padding: 5px;
+    border: 2px solid blue;
+}
+.unclassified {
+    color: green;
+    font-weight: bold;
+    background-color: #dfd;
+    padding: 5px;
+    border: 2px solid green;
+}

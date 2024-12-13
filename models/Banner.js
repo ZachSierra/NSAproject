@@ -1,3 +1,4 @@
+'use strict';
 class Banner{
     /**
      * 
@@ -32,4 +33,3 @@ class Banner{
         return this.dissemination;
     }
 }
-module.exports = Banner;

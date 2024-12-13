@@ -1,3 +1,4 @@
+'use strict';
 class Classification{
     /**
      * @param {String} name 
@@ -15,4 +16,3 @@ class Classification{
     }
 
 }
-module.exports = Classification;

@@ -1,3 +1,4 @@
+'use strict';
 class Dissemination{
     /**
      * @param {String} name 
@@ -13,4 +14,3 @@ class Dissemination{
         return this.name;
     }
 }
-module.exports = Dissemination;
