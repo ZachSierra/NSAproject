@@ -1,6 +1,27 @@
+const url = chrome.runtime.getURL('../json/sci.json');
 
+//console.log(url);
 
-function validateBanner(banner) {
+async function getData(url) {
+    try {
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error(`Response status: ${response.status}`);
+        }
+
+        const json = await response.json();
+        return json;
+        //console.log(json);
+    } catch (error) {
+        console.error(error.message);
+    }
+}
+
+async function validateBanner(banner) {
+    let json;
+    getData(url).then(data => { console.log(data.json) });
+    const sciJSON = JSON.parse(json);
+
 
     const allMarkings = banner.sci;
 
@@ -74,4 +95,3 @@ function validateBanner(banner) {
     return banner.classification;
 }
 
-export default validateBanner;

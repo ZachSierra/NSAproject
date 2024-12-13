@@ -7,5 +7,3 @@ function injectCss(){
     link.href = '../scripts/NSA.css';
     header.appendChild(link);
 }
-
-console.log("hello");

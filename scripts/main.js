@@ -10,8 +10,10 @@ textElements.forEach(element => {
     if( textContent.match(bannerRegex)){
         console.log(textContent.match(bannerRegex));
     }
-    const banner = textContent.match(bannerRegex);
-    const categories = banner[0].split('//');
+    let banner = textContent.match(bannerRegex);
+    console.log(banner[0]);
+    banner = banner[0];
+    const categories = banner.split('//');
 
     let newBanner;
     let sci;
