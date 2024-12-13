@@ -55,7 +55,7 @@
     "name": "Not Releasable to Foreign Nationals",
     "classification": "NOFORN",
     "requiredWith": [],
-    "prohibitedWith": ["UNCLASSIFIED", "RELTO", "RELIDO", "EYES ONLY"],
+    "prohibitedWith": ["UNCLASSIFIED", "REL TO", "RELIDO", "EYES ONLY"],
     "class-name": "style5",
     "description": "Information that cannot be shared with foreign nationals. May be used with TOP SECRET, SECRET, CONFIDENTIAL, or UNCLASSIFIED.",
     "accessLevel": "restricted,secret,top secret",
@@ -65,7 +65,7 @@
     }
   },
   {
-    "name": "Caution - Proprietary Information Involved",
+    "name": "Proprietary Information Involved",
     "classification": "PROPIN",
     "requiredWith": [],
     "prohibitedWith": [],
@@ -130,8 +130,8 @@
     }
   },
   {
-    "name": "Sigma [#]",
-    "classification": "SG [#]",
+    "name": "Sigma",
+    "classification": "SG",
     "requiredWith": ["RD", "FRD"],
     "prohibitedWith": ["UNCLASSIFIED"],
     "class-name": "style11",
@@ -156,7 +156,7 @@
     }
   },
   {
-    "name": "DOD or DOE Controlled Nuclear Information",
+    "name": "DOD Controlled Nuclear Information",
     "classification": "DCNI",
     "requiredWith": [],
     "prohibitedWith": ["CONFIDENTIAL", "SECRET", "TOP SECRET"],
@@ -172,7 +172,7 @@
     "name": "USA Eyes Only",
     "classification": "EYES",
     "requiredWith": [],
-    "prohibitedWith": ["NOFORN", "RELTO", "UNCLASSIFIED"],
+    "prohibitedWith": ["NOFORN", "REL TO", "UNCLASSIFIED"],
     "class-name": "style15",
     "description": "Information restricted to U.S. personnel only. May only be used with TOP SECRET, SECRET, or CONFIDENTIAL. Cannot be used with NOFORN or REL TO. Can be used with RELIDO.",
     "accessLevel": "restricted,secret,top secret",

@@ -95,5 +95,4 @@ function createBanner(categories){
 
 }
 
-
 main().then(r => console.log("done"));
