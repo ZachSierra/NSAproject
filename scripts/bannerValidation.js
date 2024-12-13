@@ -1,9 +1,53 @@
-import sciJSON from '../json/sci.json';
-import disseminationJSON from '../json/dissemination.json';
+const sciUrl = chrome.runtime.getURL('../json/sci.json');
+const dissemUrl = chrome.runtime.getURL('../json/dissemination.json');
 
-function validateBanner(banner) {
+//console.log(url);
+
+async function getSciData(sciUrl) {
+    try {
+        const response = await fetch(sciUrl);
+        if (!response.ok) {
+            throw new Error(`Response status: ${response.status}`);
+        }
+        return await response.json();
+    } catch (error) {
+        console.error(error.message);
+    }
+    return null;
+}
+
+async function getDissemData(dissemUrl) {
+    try {
+        const response = await fetch(dissemUrl);
+        if (!response.ok) {
+            throw new Error(`Response status: ${response.status}`);
+        }
+        return await response.json();
+    } catch (error) {
+        console.error(error.message);
+    }
+    return null;
+}
+
+async function validateBanner(banner) {
+
+    const sciJSON = await getSciData(sciUrl);
+    if (!sciJSON) {
+        console.error('Failed to fetch or parse JSON.');
+        return;
+    }
+
+    const dissemJSON = await getDissemData(dissemUrl);
+    if (!dissemJSON) {
+        console.error('Failed to fetch or parse JSON.');
+        return;
+    }
+
+
+
 
     const allMarkings = banner.sci;
+
 
     // validate sci
     for (const sci of banner.sci) {
@@ -37,7 +81,7 @@ function validateBanner(banner) {
     for(let i = 0; i < banner.dissemination.length; i++) {
         const dism = banner.dissemination[i];
 
-        const foundDism = disseminationJSON.find(d => dism.getName().includes(d.classification));
+        const foundDism = dissemJSON.find(d => dism.getName().includes(d.classification));
         if(!foundDism){
             console.log("ERROR: Invalid dissemination found : [" + dism.getName() + "]");
             return banner.classification;
@@ -74,3 +118,4 @@ function validateBanner(banner) {
 
     return banner.classification;
 }
+
