@@ -32,4 +32,15 @@ class Banner{
     getDissemination(){
         return this.dissemination;
     }
+    toString(){
+        let string = this.classification.getName();
+
+        for (let i = 0; i < this.sci.length; i++) {
+            string += ' ' + this.sci[i].getName();
+        }
+        for (let i = 0; i < this.dissemination.length; i++) {
+            string += ' ' + this.dissemination[i].getName();
+        }
+        return string;
+    }
 }
