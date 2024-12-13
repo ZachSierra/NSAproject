@@ -82,6 +82,6 @@ async function main() {
     }
 }
 
-main().then(r => console.log("done"));
+main().then(r => console.log(""));
 
 

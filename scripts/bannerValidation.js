@@ -55,21 +55,21 @@ async function validateBanner(banner) {
             if (sci.name === rule.name) {
                 for (const prohibited of rule['prohibitedWith']) {
                     if (banner.classification === prohibited) {
-                        console.log("ERROR: Cannot use classification with this SCI.")
+                        console.log("ERROR: Cannot use " + banner.classification + "with " + sci.name + ".");
                         return banner.classification;
                     }
                 }
 
                 for (const requiredClass of rule['requiredClassification']) {
                     if (requiredClass !== "" && banner.classification !== requiredClass) {
-                        console.log("ERROR: Required class is not included. [" + requiredClass + "]");
+                        console.log("ERROR: Required class " + requiredClass + " is not included in banner for " + sci.name + ".");
                         return banner.classification;
                     }
                 }
 
                 for (const requiredDissem of rule['requiredDissemination']) {
                     if (requiredDissem !== "" && banner.dissemination !== requiredDissem) {
-                        console.log("ERROR: Required dissemination is not included. [" + requiredDissem + "]");
+                        console.log("ERROR: Required dissemination " + requiredDissem + " is not included in banner for " + sci.name + ".");
                         return banner.classification;
                     }
                 }
@@ -83,7 +83,7 @@ async function validateBanner(banner) {
 
         const foundDism = dissemJSON.find(d => dism.getName().includes(d.classification));
         if(!foundDism){
-            console.log("ERROR: Invalid dissemination found : [" + dism.getName() + "]");
+            console.log("ERROR: Invalid dissemination found: " + dism.getName() + ".");
             return banner.classification;
         }
 
@@ -99,7 +99,7 @@ async function validateBanner(banner) {
             })
 
             if(foundProhibited){
-                console.log("ERROR: Prohibited marking found: [" + prohibitedTerm + "]");
+                console.log("ERROR: Prohibited marking found: " + prohibitedTerm + ".");
                 return banner.classification;
             }
         }
@@ -110,7 +110,7 @@ async function validateBanner(banner) {
             });
 
             if(!foundReq){
-                console.log("ERROR: One of required markings not found: [" + foundDism['requiredWith'] + "]");
+                console.log("ERROR: One of required markings not found: " + foundDism['requiredWith'] + ".");
                 return banner.classification;
             }
         }
