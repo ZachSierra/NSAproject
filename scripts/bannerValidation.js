@@ -1,7 +1,6 @@
 const sciUrl = chrome.runtime.getURL('../json/sci.json');
 const dissemUrl = chrome.runtime.getURL('../json/dissemination.json');
 
-//console.log(url);
 
 async function getSciData(sciUrl) {
     try {
@@ -30,24 +29,20 @@ async function getDissemData(dissemUrl) {
 }
 
 async function validateBanner(banner) {
-
+    // grab json data
     const sciJSON = await getSciData(sciUrl);
     if (!sciJSON) {
         console.error('Failed to fetch or parse JSON.');
         return;
     }
-
+    // grab json data
     const dissemJSON = await getDissemData(dissemUrl);
     if (!dissemJSON) {
         console.error('Failed to fetch or parse JSON.');
         return;
     }
 
-
-
-
     const allMarkings = banner.sci;
-
 
     // validate sci
     for (const sci of banner.sci) {
