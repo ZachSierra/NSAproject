@@ -1,3 +1,4 @@
+'use strict';
 class Sci{
     /**
      * @param {String} name 
@@ -13,4 +14,3 @@ class Sci{
         return this.name;
     }
 }
-module.exports = Sci;

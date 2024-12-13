@@ -1,16 +1,26 @@
 {
-    "name": "Info Alert Extensions",
-    "description": "Info Alert for All Paragraphs Extension",
+    "name": "NSA HTML styling",
+    "description": "Extension that converts NSA documents to a stylized format, making it easier to read.",
     "version": "1.0",
     "manifest_version": 3,
+    "permissions": ["activeTab", "scripting", "tabs", "storage"],
+    "web_accessible_resources": [{
+        "matches": ["<all_urls>"],
+        "resources": ["./scripts/*", "./models/*", "./json/*"]
+    }],
     "content_scripts": [
     {
         "js": [
-            "content-script.js"
+            "./models/Sci.js",
+            "./models/Dissemination.js",
+            "./models/Classification.js",
+            "./models/Banner.js",
+            "./scripts/inject.js",
+            "./scripts/bannerValidation.js",
+            "./scripts/main.js"
         ],
         "matches": [
-            "<all_urls>",
-            "file:///"
+            "<all_urls>"
         ]
     }
 ]

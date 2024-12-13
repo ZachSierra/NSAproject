@@ -1,5 +1,4 @@
-import sciJSON from '../json/sci.json';
-import disseminationJSON from '../json/dissemination.json';
+
 
 function validateBanner(banner) {
 
@@ -74,3 +73,5 @@ function validateBanner(banner) {
 
     return banner.classification;
 }
+
+export default validateBanner;
