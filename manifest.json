@@ -9,6 +9,11 @@
         "resources": ["./scripts/*", "./models/*", "json/*"],
         "extension_ids": ["njediokommgigeflnakhmbddnbbjgnnb"]
     }],
+    "icons": {
+        "16": "NSA_LOGO.png",
+        "48": "NSA_LOGO.png",
+        "128": "NSA_LOGO.png"
+    },
     "content_scripts": [
     {
         "js": [
